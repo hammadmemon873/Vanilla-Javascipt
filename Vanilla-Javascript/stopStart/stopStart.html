@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>we are learning javascript file 2</h3>
+    <input type="button" id="start" value="start">
+    <input type="button" id="stop" value="Stop">
+
+</body>
+<script>
+    let changed = document.querySelector('h3')
+    let start = document.querySelector('#start')
+    let stop = document.querySelector('#stop')
+    let interval;
+    let counter = 0;
+
+    start.addEventListener('click', function (e) {
+         interval = setInterval(() => {
+            changed.innerHTML = counter++;
+
+        }, 1000);
+    })
+
+    stop.addEventListener('click', function (e) {
+
+        clearInterval(interval);
+    })
+
+
+</script>
+
+</html>

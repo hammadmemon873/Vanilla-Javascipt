@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+    <h2>Calculate BMI </h2>
+    <div>
+    <label for="kg">Weight in kg</label>
+    <input type="text" name="" id="kg">
+</div>
+    <label for="cm">Height in m</label>
+    <input type="text" name="" id="m">
+    <br/>
+    <input type="submit" value="Calculate" id ="Calculate"> 
+    <div class="result">
+
+
+    </div>
+</form>
+</body>
+
+<script>
+    let form = document.querySelector('form');
+    form.addEventListener('submit', (e) =>{
+        e.preventDefault();
+        let kg =parseFloat(document.querySelector('#kg').value)
+        let m = parseFloat(document.querySelector('#m').value)
+        let bmi = kg/(m*m);
+        let result = document.querySelector('.result');
+        console.log(bmi);
+        let final =result.innerHTML = bmi;   
+        if(bmi < 18.5){
+            result.innerHTML = "Underweight";
+        }
+        else if(bmi >= 18.5 && bmi < 25){
+            result.innerHTML = "Normal";
+        }
+        else if(bmi >= 25 && bmi < 31){
+            result.innerHTML = "Overweight";
+        }
+    })
+  
+</script>
+</html>

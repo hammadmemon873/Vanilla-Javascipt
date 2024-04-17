@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .playGround {
+            width: 700px;
+            height: 700px;
+            background-color: black;
+        }
+        .mosquito img{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class = "status"></div>
+    <button id = "startGame">start</button>
+    <div class = "playGround ">
+        <div class = "mosquito ">
+            <img src="https://www.pngfind.com/pngs/m/76-768297_climate-change-and-mosquito-vector-borne-diseases-icon.png" alt="">
+
+        </div>    
+
+    </div>
+    <div class = "hit ">
+    </div>
+
+</body>
+<script>
+    let mosquito = document.querySelector(".mosquito img")
+    let startGame = document.querySelector("#startGame")
+    let status = document.getElementsByClassName("status")[0]
+    let hit = document.getElementsByClassName("hit")[0]
+    let counter = 0
+    let GameStart;
+    startGame.addEventListener("click",()=>{
+        GameStart = true
+        status.innerHTML = "<h3>Game Start </h3>"
+       let start =  setInterval(()=>{
+        mosquito.style.left = Math.round(Math.random()*600) + "px"
+    mosquito.style.top = Math.round(Math.random()*600) + "px"
+
+    },2000)
+    setTimeout(()=>{
+        clearInterval(start)
+        status.innerHTML = "<h1>Game Over </h1>"
+        GameStart = false
+    },15000)
+
+    })
+    
+   
+
+    mosquito.addEventListener("click",()=>{
+        if(GameStart){
+       ++counter
+        hit.innerHTML =  "<h3> Mosquito Hit </h3>" + counter
+        }
+    })
+</script>
+</html>

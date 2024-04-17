@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-color: rgba(98, 102, 102, 0.922);
+    }
+    .box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    img  {
+        width: 300px;
+        height: 300px;
+        
+    }
+    .effect:hover{
+        transform: scale(1.2);
+    }
+   
+    
+    .dynamic {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%)
+   
+    }
+    .dynamic img{
+        display: none;
+    }
+    .dynamic  button{
+        display: none;
+        position: absolute;
+        border-radius: 2px;
+        color: white;
+        background-color: black;
+    }
+</style>
+<body>
+ <div  class="box">
+    <div class = "row">
+        <img src="https://plus.unsplash.com/premium_photo-1676637000058-96549206fe71?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" class = "effect" alt="">
+        <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" class = "effect" alt="">
+        <img src="https://images.unsplash.com/photo-1566438480900-0609be27a4be?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aW1hZ2V8ZW58MHx8MHx8fDA%3D" class = "effect" alt="">
+        <img src="https://images.unsplash.com/photo-1488372759477-a7f4aa078cb6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" class = "effect" alt="">
+        <img src="https://images.unsplash.com/photo-1574169208507-84376144848b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" class = "effect" alt="">
+        
+    </div>
+    <div class = "row">
+        <img src="https://media.istockphoto.com/id/1452604857/photo/businessman-touching-the-brain-working-of-artificial-intelligence-automation-predictive.jpg?s=612x612&w=0&k=20&c=GkAOxzduJbUKpS2-LX_l6jSKtyhdKlnPMo2ito4xpR4="class = "effect" alt="">
+        <img src="https://media.istockphoto.com/id/1435014643/photo/ai-machine-learning-robot-hand-ai-artificial-intelligence-assistance-human-touching-on-big.jpg?s=612x612&w=0&k=20&c=MlbHdhkfqetT9b9kq58EPb2x_twui75NS-dCY01nf4Q=" class = "effect"alt="">
+        <img src="https://media.istockphoto.com/id/1277767891/photo/various-fresh-ripe-pumpkins-as-background.jpg?s=612x612&w=0&k=20&c=ze8MF929Kq3uzdYqJOZ06aGSgXT05UgO_ZfUtbmkfNU="class = "effect" alt="">
+        <img src="https://media.istockphoto.com/id/1479180033/photo/digital-eye-ai-artificial-intelligence-digital-concept.jpg?s=612x612&w=0&k=20&c=5s1tl4bpMIVEv4g7Fckl2i26mfs2Rx-LzCtdaqumsz8="class = "effect" alt="">
+        <img src="https://media.istockphoto.com/id/1413603540/photo/doctor-researcher-or-scientist-browsing-the-internet-on-a-tablet-for-information-while.jpg?s=612x612&w=0&k=20&c=nHU23UEbj4jBXPGKZHsicZSS-F0iYm3rOeAASDgBe8U="class = "effect" alt="">
+
+    </div>
+    <div  class = "row">
+        <img src="https://media.istockphoto.com/id/1448386210/photo/a-large-gray-craftsman-new-construction-house-with-a-landscaped-yard-and-leading-pathway.webp?b=1&s=170667a&w=0&k=20&c=8ogqfMtrzm12IZmktJ1BZ_o-eKGKBBnXZqdtfMUIqFo="class = "effect" alt="">
+        <img src="https://media.istockphoto.com/id/1485949072/photo/girl-holding-light-bulb-with-virtual-artificial-intelligence-and-virtual-digital-brain-ai.jpg?s=612x612&w=0&k=20&c=RND2GEqHha_Bpn-SDitJqnQKf5uc519z64iV4anft0E="class = "effect" alt="">
+        <img src="https://media.istockphoto.com/id/1462024468/photo/artificial-chat-chat-with-ai-or-artificial-intelligence-digital-chatbot-robot-application.jpg?s=612x612&w=0&k=20&c=2WJYTDbIQ3-w1sCeO3rF5JqoCqHLVCfzxjtCUN6PeHU="class = "effect" alt="">
+        <img src="https://media.istockphoto.com/id/1446244335/photo/baseball-leather-glove-and-ball-on-pitch-sand-after-fitness-workout-or-training-for-match-or.jpg?s=612x612&w=0&k=20&c=2tfQebBGPlHVgJ9M9xdkCYFwmvuUoDDdjyTE2rhetao="class = "effect"alt="">
+        <img src="https://media.istockphoto.com/id/1483204178/photo/yellow-typical-tram-in-lisbon-portugal.jpg?s=612x612&w=0&k=20&c=m0X8fJnuO8zF87z43T7hbU6lPIWiKXtMBMBcBUQvWm0=" alt="">
+
+    </div>
+</div>
+    <div  class = "dynamic">
+        <button>X</button>
+        <img src="https://images.unsplash.com/photo-1633621412960-6df85eff8c85?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGltYWdlfGVufDB8fDB8fHww" alt="">
+    </div>
+
+ 
+</body>
+<script>
+   let dynamicImg = document.querySelector(".dynamic img ");
+   let button = document.querySelector(".dynamic  button ");
+    let box = document.querySelector(".box");
+   let images = document.querySelectorAll('.row img');
+   
+    images.forEach(element => {
+        element.addEventListener('click',()=>{
+        dynamicImg.style.display = "block";
+        button.style.display =" block"
+        dynamicImg.src = element.src
+        dynamicImg.style.width = "500px"
+        dynamicImg.style.height = "500px"
+        box.style.opacity = 0.2
+        
+    })
+    });
+
+    button.addEventListener('click',()=>{
+        dynamicImg.style.display = "none";
+        button.style.display ="none"
+        box.style.opacity = 1
+
+        
+    })
+
+    
+
+</script>
+</html>        

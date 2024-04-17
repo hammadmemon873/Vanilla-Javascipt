@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3{
+            text-align: center;
+            font-style: italic;
+            font-size: larger;
+        }
+        input{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <h3> Random Color Generator</h3>
+    <input type="button" id="start" value="start">
+    <input type="button" id = "stop" value="stop">
+
+
+    <script>
+        let start = document.querySelector("#start");
+        let stop = document.querySelector("#stop");
+        let value = "0123456789ABCDEF";
+        let startInterval
+         
+        let color;
+        function randomColor(){
+        color = "#"
+        for(let i = 0; i <6; i++) {
+            color = color + value[Math.floor(Math.random()*16)]
+        
+    }
+    console.log(color);
+    document.body.style.backgroundColor = color;
+}
+       
+
+          
+      
+    start.addEventListener("click", function() {
+         startInterval=setInterval(randomColor, 1000);
+
+    })
+    stop.addEventListener("click",function(){
+        clearInterval(startInterval)
+
+    })
+
+
+
+    </script>
+</body>
+</html>
